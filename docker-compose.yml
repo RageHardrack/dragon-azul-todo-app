@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  db-mysql:
+    image: mysql:${MYSQL_IMAGE_VERSION}
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_USER_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+    container_name: dragon-azul-${DB_NAME}
+    ports:
+      - ${DB_PORT}:3306
+    volumes:
+      - ./db-${DB_NAME}:/var/lib/mysql
