@@ -6,7 +6,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "start:prod": "node .output/server/index.mjs",
+    "start:migrate:prod": "prisma migrate deploy && npm run start:prod"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "6.6.5",

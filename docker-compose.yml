@@ -12,3 +12,23 @@ services:
       - ${DB_PORT}:3306
     volumes:
       - ./db-${DB_NAME}:/var/lib/mysql
+  app:
+    container_name: nuxt-todo-app
+    image: dragon-azul-todo-app
+    build: .
+    ports:
+      - "3000:3000"
+    restart: always
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+    depends_on:
+      - db-mysql
+  nginx:
+    image: nginx:stable
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
