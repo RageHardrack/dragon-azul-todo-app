@@ -10,7 +10,7 @@
           target="_blank"
           href="https://github.com/RageHardrack"
         >
-          Daniel Colmenares
+          Dan Colmenares
         </a>
       </p>
     </div>
