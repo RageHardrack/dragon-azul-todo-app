@@ -25,6 +25,16 @@ Start the development server on `http://localhost:3000`
 npm run dev
 ```
 
+## Development Docker Compose
+
+```bash
+docker-compose -f docker-compose.dev.yml up -d
+```
+
+```bash
+docker-compose -f docker-compose.dev.yml down
+```
+
 ## Production
 
 Build the application for production:
@@ -37,6 +47,16 @@ Locally preview production build:
 
 ```bash
 npm run preview
+```
+
+## Deploy with Docker Compose
+
+```bash
+docker-compose -f docker-compose.prod.yml up -d
+```
+
+```bash
+docker-compose -f docker-compose.prod.yml down
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

@@ -5,6 +5,7 @@ node_modules
 .cache
 .output
 .env
+.env.dev
 dist
 .DS_Store
-db-notas_app/
+notas_app_mysql-db/

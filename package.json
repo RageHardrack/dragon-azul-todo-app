@@ -8,7 +8,12 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "start:prod": "node .output/server/index.mjs",
-    "start:migrate:prod": "prisma migrate deploy && npm run start:prod"
+    "start:migrate:prod": "prisma migrate deploy && npm run start:prod",
+    "prisma:migrate": "prisma migrate deploy",
+    "dc-dev:up": "docker-compose -f docker-compose.dev.yml up -d",
+    "dc-dev:down": "docker-compose -f docker-compose.dev.yml down",
+    "dc-prod:up": "docker-compose -f docker-compose.prod.yml up -d",
+    "dc-prod:down": "docker-compose -f docker-compose.prod.yml down"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "6.6.5",

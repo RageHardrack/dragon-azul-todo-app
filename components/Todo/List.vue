@@ -27,7 +27,7 @@ const handleToggleItem = async (id: string, completed: boolean) => {
   <ul v-else class="border rounded border-white w-1/2">
     <li
       class="flex justify-between items-center rounded px-6 py-4"
-      v-if="data!.todos.length === 0"
+      v-if="data?.todos.length === 0"
     >
       No hay tareas pendientes...
     </li>
